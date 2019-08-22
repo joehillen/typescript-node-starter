@@ -11,23 +11,22 @@
     "lint": "eslint --ext ts src",
     "lint:fix": "eslint --fix --ext ts src",
     "start": "node dist/index.js",
-    "test": "jest",
+    "test": "ts-mocha src/**/*.spec.ts",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "author": "Joe Hillenbrand",
   "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^24.0.18",
+    "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.2",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.1",
-    "jest": "^24.9.0",
+    "mocha": "^6.2.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
-    "ts-jest": "^24.0.2",
-    "ts-node": "^8.3.0",
+    "ts-mocha": "^6.0.0",
     "typescript": "^3.5.3"
   }
 }
