@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "es2019",
-    "moduleResolution": "node",
+    "lib": ["es2019"],
     "outDir": "dist",
     "strict": true,
+    "allowSyntheticDefaultImports": true,
     // "noUnusedLocals": true,
     // "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "lib": ["es2019"]
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src/**/*"]
 }
