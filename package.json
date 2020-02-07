@@ -2,6 +2,7 @@
   "name": "typescript-node-starter",
   "version": "1.0.0",
   "description": "A baseline Node/Typescript project using ESLint and Jest",
+  "author": "Joe Hillenbrand",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -13,9 +14,9 @@
     "start": "node dist/index.js",
     "test": "ts-mocha src/**/*.spec.ts",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "clean": "rm -rf dist/"
   },
-  "author": "Joe Hillenbrand",
   "dependencies": {},
   "devDependencies": {
     "@types/mocha": "^5.2.7",
