@@ -28,6 +28,4 @@ jobs:
     - run: npm run lint
     - run: npm run build
     - run: npm test
-    - run: git status
-    - run: git commit -am "update"
-    - run: git push origin master
+    - run: git diff --no-ext-diff --quiet --exit-code
