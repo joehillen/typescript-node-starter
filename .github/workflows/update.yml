@@ -1,19 +1,15 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Update Packages
 
 on:
   schedule:
     - cron: '0 0 * * 0'
-  push:
-    branches:
-      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: "! contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 14.x
@@ -31,4 +27,4 @@ jobs:
       - run: npm test
       - run: git config --global user.email "joehillen+github@gmail.com"
       - run: git config --global user.name "GitHub Action"
-      - run: git diff --no-ext-diff --quiet --exit-code || (git commit -am "update [skip-ci]" && git push)
+      - run: git diff --no-ext-diff --quiet --exit-code || (git commit -am "update" && git push)
