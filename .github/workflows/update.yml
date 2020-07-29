@@ -28,4 +28,6 @@ jobs:
       - run: npm run lint
       - run: npm run build
       - run: npm test
+      - run: git config --global user.email "joehillen+github@gmail.com"
+      - run: git config --global user.name "GitHub Action"
       - run: git diff --no-ext-diff --quiet --exit-code || (git commit -am "update" && git push)
