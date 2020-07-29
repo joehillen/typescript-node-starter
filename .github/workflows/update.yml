@@ -4,8 +4,8 @@
 name: Node.js CI
 
 on:
-  schedule: 
-   - cron: "0 0 * * 0"
+  schedule:
+    - cron: '0 0 * * 0'
   push:
     branches:
       - master
@@ -14,18 +14,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 14.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
-        
-    - run: npm install
-    - run: npx npm-check-updates -u
-    - run: npm install
-    - run: npm update
-    - run: npm audit fix --force
-    - run: npm run lint
-    - run: npm run build
-    - run: npm test
-    - run: git diff --no-ext-diff --quiet --exit-code
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - run: npm install
+      - run: npx npm-check-updates -u
+      - run: npm install
+      - run: npm update
+      - run: npm audit fix --force
+      - run: npm run lint
+      - run: npm run build
+      - run: npm test
+      - run: git diff --no-ext-diff --quiet --exit-code || (git commit -am "update" && git push)
