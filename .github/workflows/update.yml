@@ -13,6 +13,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 14.x
@@ -30,4 +31,4 @@ jobs:
       - run: npm test
       - run: git config --global user.email "joehillen+github@gmail.com"
       - run: git config --global user.name "GitHub Action"
-      - run: git diff --no-ext-diff --quiet --exit-code || (git commit -am "update" && git push)
+      - run: git diff --no-ext-diff --quiet --exit-code || (git commit -am "update [skip-ci]" && git push)
