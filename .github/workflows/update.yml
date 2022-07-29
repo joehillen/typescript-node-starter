@@ -6,6 +6,8 @@ name: Update Packages
 on:
   schedule:
     - cron: '0 0 * * 0'
+on: workflow_dispatch
+    
 
 jobs:
   build:
