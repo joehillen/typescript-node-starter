@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "module": "commonjs",
+    "target": "es2022",
+    "module": "es2022",
     "moduleResolution": "node",
-    "lib": ["es2019"],
+    "lib": ["es2022"],
     "outDir": "dist",
     "strict": true,
     "allowSyntheticDefaultImports": true,
