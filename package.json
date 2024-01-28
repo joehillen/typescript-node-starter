@@ -20,13 +20,13 @@
   "dependencies": {},
   "devDependencies": {
     "@types/mocha": "^10.0.6",
-    "@types/node": "^20.11.5",
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0",
+    "@types/node": "^20.11.10",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
     "eslint": "^8.56.0",
     "mocha": "^10.2.0",
     "nodemon": "^3.0.3",
-    "npm-check-updates": "^16.14.12",
+    "npm-check-updates": "^16.14.14",
     "prettier": "^3.2.4",
     "ts-mocha": "^10.0.0",
     "typescript": "^5.3.3"
